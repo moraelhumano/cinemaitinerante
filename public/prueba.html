@@ -1,0 +1,91 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Firebase meetup #2</title>
+</head>
+<body>
+<h1>Bienvenidos al Meetup #2</h1>
+
+<div id="log">
+	<input type="email" id="email" placeholder="Email">
+	<input type="password" id="pass" placeholder="Escribe tu contraseña">
+	<button id="login" onClick="inicio()">Entrar</button>
+</div>
+<button id="logout" onClick="cerrar()">Cerrar Sesión</button>
+
+
+
+<script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAUMJEqEIwZt8Sq407LLeFVDTx6XhXSRSg",
+    authDomain: "portafolio-a3617.firebaseapp.com",
+    databaseURL: "https://portafolio-a3617.firebaseio.com",
+    storageBucket: "portafolio-a3617.appspot.com",
+    messagingSenderId: "160357188270"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script>
+	function inicio(){
+		if(firebase.auth().currentUser){
+			firebase.auth().signOut();
+			console.log('Salió');
+		}else{
+			var email = document.getElementById('email').value;
+			var password = $('#pass').val();
+			if(email.length < 4){
+				alert('Introduce un correo');
+				return;
+
+			}
+			if(password.length < 4){
+				alert ( 'Escribe tu password bien');
+				return;
+			}
+			firebase.auth().signInWithEmailAndPassword(email,password).catch(function(error){
+				var errorCode = error.code;
+				var errorMessage = error.message;
+				if(errorCode === 'auth/wrong-password'){
+					alert('Password esta todo mal');
+
+				}else{
+					alert(errorMessage);
+				}
+			});
+		}
+		console.log('terminé')
+	}
+
+// Manejamos los datos del user
+
+function initApp(){
+	firebase.auth().onAuthStateChanged(
+		function(user){
+			if(user){
+				$('h1').text('Bienvenido\n' + user.email);
+				$('#log').fadeOut();
+			}
+		});
+}
+
+function cerrar(){
+	firebase.auth().signOut();
+	$('#log').fadeIn();
+	$('#logout').fadeOut();
+	console.log('apachurrado');
+	$('h1').text('Vuelve pronto');
+}
+
+window.onload = function(){
+	initApp();
+}
+
+</script>
+
+
+</body>
+</html>

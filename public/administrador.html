@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="moraAdim">
+<head>
+	<meta charset="UTF-8">
+	<title>Mora El Humano</title>	
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="theme-color" content="#29b6f6">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper light-blue lighten-1">
+      <a href="#/inicio" class="brand-logo text_head">Mora El Humano</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down option_head">
+        <li><a target="_blank" href="https://www.facebook.com/moraelhumanodeveloper/">Facebook</a></li>
+        <li><a target="_blank" href="/administration">Github</a></li>
+        <li><a  href="#modal3">Mensaje {{2+2}}</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div ng-view></div>
+
+
+
+  
+          
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="/scripts/administration/app.js"></script> 
+<script src="/scripts/administration/routes.js"></script> 
+<script src="/scripts/administration/administration.js"></script> 
+
+<script>
+  var config = {
+    apiKey: "AIzaSyAUMJEqEIwZt8Sq407LLeFVDTx6XhXSRSg",
+    authDomain: "portafolio-a3617.firebaseapp.com",
+    databaseURL: "https://portafolio-a3617.firebaseio.com",
+    storageBucket: "portafolio-a3617.appspot.com",
+    messagingSenderId: "160357188270"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>

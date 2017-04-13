@@ -1,0 +1,201 @@
+
+footer{
+	height: 50px;	
+	position: fixed !important;
+}
+
+.modal_massagge{
+  width: 35% !important;
+}
+
+
+.nav_bar{
+	height: 10%;
+	background-color:#29b6f6;
+}
+
+.rojo_chido{
+	background-color: #ee6e73;
+}
+
+.option_head{
+	margin-right: 35px;
+}
+
+.size_input_modal_little{
+	width: 40% !important;
+}
+
+.out_margin_buttom{
+	margin-bottom: 0px !important;
+}
+
+.div_portada{
+	width: 75%;
+	height: 86vh;
+	margin:auto !important;
+	margin-top: 35px !important;;
+	border-radius: 10px;
+}
+
+.div_portada_container{
+	text-align: center;
+}
+
+.image_me{
+	width: 200px !important;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.parallax-container {
+	      height: 70vh;
+}
+
+
+.div_text_portada{
+	font-size: 50px;
+	font-family: 'Pacifico', cursive;
+	color: #fff;
+}
+
+
+.image_hamburger{
+	width: 30px;
+	vertical-align: middle;
+}
+  
+.x_styles{
+	cursor: pointer;
+	width: 30px;
+	float: right;
+	display: block;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.height_modal{
+	height: 70%;
+}
+
+.paddin_zero{
+	padding: 0px !important;
+}
+
+.paddin_zero_buttom{
+	padding-bottom: 0px !important;
+}
+
+.zero_margin_top{
+	margin-top: 0px !important;
+}
+
+.zero_margin_bottom{
+	margin-bottom: 0px !important;
+}
+
+.size_image_computer{
+	width: 80%;
+
+}
+
+.font_size_kanban_text_desk{
+	font-size: 41px;
+}
+
+#sidenav-overlay {
+    position:relative !important;
+    display: none !important;
+}
+
+ html, body, .block {
+    height: 100%;
+  }
+
+
+ 
+  .pin-top {
+    position: relative;
+  }
+
+ 
+  .pin-bottom {
+    position: relative;
+  }
+
+  .pinned {
+    position: fixed !important;
+  }
+
+/*Estilos del modal*/
+
+.footer_display{
+	display: flex !important;
+}
+
+.button_send{
+	margin: 0px auto !important;
+	background-color: #29b6f6 !important;
+}
+
+.text_head{
+	font-family: 'Pacifico', cursive;
+}
+
+.modal_size{
+	height: 80%;
+	min-height: 75vh
+}
+
+.position_button_footer{
+    display: flex;
+}
+
+.button_footer_modal{
+	float: none !important;
+	margin: auto !important;
+}
+
+@media only screen and (min-width: 992px) {
+	
+	.text_head{
+		margin-left: 35px;
+
+	}
+
+}
+
+
+
+@media only screen and (max-width: 500px) {
+	.parallax-container {
+	      height: 200px;
+	      width: 100%;
+	    }
+
+	.div_text_portada{
+		  display: block!important;
+		  font-size: 20px;
+		  width: 100%;
+		  text-align: center;
+    }
+
+    .size_image_computer{
+		width: 80%;
+		height: 350px;
+	}
+
+	.little_text_image_paralax{
+		height: 70vh !important;
+	} 
+    
+	.font_size_kanban_text_responsive{
+		font-size: 2.56rem !important;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+
+  }
+
+
+

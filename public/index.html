@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="morado">
+<head>
+	<meta charset="UTF-8">
+	<title>Cinemaitinerante</title>	
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<!--<link rel="stylesheet" href="/assets/css/main.css">-->
+  <link rel="stylesheet/less" href="/assets/css/main.sass">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/cintafav.png">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body id="cover_public">
+<nav class="nav-extended red accent-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">CINEMAITINERANTE</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
+    </div>
+    <div class="nav-content">
+    <br>
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a ng-href="#!/inicio">INICIO</a></li>
+        <li class="tab"><a ng-href="#!/boletos">BOLETOS</a></li>
+        <li class="tab"><a ng-href="#!/unete">ÚNETE</a></li>
+      </ul>
+    </div>
+
+  </nav>
+  
+
+
+
+<div ng-view></div>
+
+    <footer class="page-footer red accent-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">CONTACTANOS</h5>
+                <p class="grey-text text-lighten-4">Siguenos en nuestras redes sociales para enterarte de más de nuestros eventos</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
+            </div>
+          </div>
+        </footer>
+
+ 
+
+
+  
+          
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.6/firebase.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="/scripts/portafolio/app.js"></script> 
+<script src="/factories/apimovie.factory.js"></script>
+<script src="/scripts/portafolio/portafolio/portafolio.js"></script> 
+<script src="/scripts/portafolio/boletos/boletos.js"></script> 
+<script src="/scripts/portafolio/unete/unete.js"></script> 
+<script src="/scripts/portafolio/compra/compra.js"></script> 
+<script src="/scripts/portafolio/routes.js"></script> 
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAM0n2N5U7l4pHxscQ1Pcv_baYPTkMfgq4",
+    authDomain: "desarrolloweb-1bcb8.firebaseapp.com",
+    databaseURL: "https://desarrolloweb-1bcb8.firebaseio.com",
+    projectId: "desarrolloweb-1bcb8",
+    storageBucket: "desarrolloweb-1bcb8.appspot.com",
+    messagingSenderId: "113434970636"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>
